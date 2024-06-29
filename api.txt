@@ -1,0 +1,79 @@
+authentication
+
+schema:User
+
+attributes=["username","email","password"]
+
+1)Api for creating user account
+
+  url:localhost:8000/api/register/
+
+  method:POST
+
+  body={
+    username,
+    email,
+    password
+  }
+
+  ===============================================================
+
+schema:Income
+
+attributes=["title","amount","category","created_date"]
+
+
+1) Api for for listing all Income
+
+   url:localhost:8000/api/incomes/
+
+   method:GET
+
+   body:nil
+
+   authorization={"username","password"} # basic authentication
+
+2)  Api for for creating an Income
+
+   url:localhost:8000/api/incomes/
+
+   method:POST
+
+   body:{"title","amount","category","created_date"}
+
+   authorization={"username","password"}
+
+3)  Api for for detail an Income
+
+   url:localhost:8000/api/incomes/{id}
+
+   method:GET
+
+   body:nil
+
+   authorization={"username","password"}
+   
+4)  Api for for update an Income
+
+   url:localhost:8000/api/incomes/{id}
+
+   method:PUT
+
+   body:{"title","amount","category","created_date"}
+
+   authorization={"username","password"}
+   
+5) Api for for delete an Income
+
+   url:localhost:8000/api/incomes/{id}
+
+   method:DELETE
+
+   body:nil
+
+   authorization={"username","password"}
+   
+
+
+
+
